@@ -1,9 +1,23 @@
 <html>
-<head><title>Car charging</title></head>
+<head>
+    <title>Car charging</title>
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+</head>
 <body>
 <h1>Logs</h1>
-<ul>
-    <li th:each="log: ${logs}"><span th:text="${log}">log</span></li>
-</ul>
+<table class="logTable">
+    <thead>
+    <tr>
+        <th>Timestamp</th>
+        <th>Message</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each="log: ${logs}">
+            <td th:text="${{log.timestamp}}">now</td>
+            <td th:text="${log.message}">log</td>
+        </tr>
+    </tbody>
+</table>
 </body>
 </html>
