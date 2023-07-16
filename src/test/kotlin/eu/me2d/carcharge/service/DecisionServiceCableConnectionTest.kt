@@ -4,8 +4,6 @@ import eu.me2d.carcharge.dto.Conditions
 import eu.me2d.carcharge.log.LoggingService
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.collections.shouldContain
-import io.kotest.matchers.sequences.atLeastCount
-import io.kotest.matchers.string.contain
 import io.kotest.matchers.string.shouldContain
 import io.mockk.*
 

@@ -38,7 +38,7 @@ class DecisionService(
         newConditions: Conditions
     ) {
         if (newConditions.mode == ChargingMode.OFF) {
-            if (currentConditions.charging == true) {
+            if (newConditions.charging == true) {
                 loggingService.logForCar(carId, "Charging requested to stop by mode OFF")
                 controlService.stopCharging(carId)
             } else {
